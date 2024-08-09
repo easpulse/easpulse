@@ -1,0 +1,131 @@
+WITH
+  optimism_counts AS (
+    SELECT
+      COUNT(DISTINCT recipient) AS op_recipient_count,
+      COUNT(*) AS op_attestation_count,
+      (
+        SELECT
+          COUNT(*)
+        FROM
+          attestationstation_v1_optimism.EAS_evt_Revoked
+        WHERE
+          attester = 0x843829986e895facd330486a61ebee9e1f1adb1a
+      ) AS op_revoked_count
+    FROM
+      attestationstation_v1_optimism.EAS_evt_Attested
+    WHERE
+      attester = 0x843829986e895facd330486a61ebee9e1f1adb1a
+  ),
+  linea_counts AS (
+    SELECT
+      COUNT(DISTINCT attester) AS linea_attester_count,
+      COUNT(DISTINCT recipient) AS linea_recipient_count,
+      COUNT(*) AS linea_attestation_count,
+      (
+        SELECT
+          COUNT(*)
+        FROM
+          attestationstation_v1_linea.EAS_evt_Revoked
+        WHERE
+          attester = 0xbc778313e52b1184a15d163b5d3a72aef8d510a2
+      ) AS linea_revoked_count
+    FROM
+      attestationstation_v1_linea.EAS_evt_Attested
+    WHERE
+      attester = 0xbc778313e52b1184a15d163b5d3a72aef8d510a2
+  ),
+  arbitrum_counts AS (
+    SELECT
+      COUNT(DISTINCT attester) AS arbitrum_attester_count,
+      COUNT(DISTINCT recipient) AS arbitrum_recipient_count,
+      COUNT(*) AS arbitrum_attestation_count,
+      (
+        SELECT
+          COUNT(*)
+        FROM
+          arbitrum_eas_arbitrum.EAS_evt_Revoked
+        WHERE
+          attester = 0x7848a3578Ff2E1F134659a23f64A404a4D710475
+      ) AS arbitrum_revoked_count
+    FROM
+      arbitrum_eas_arbitrum.EAS_evt_Attested
+    WHERE
+      attester = 0x7848a3578Ff2E1F134659a23f64A404a4D710475
+  ),
+  zksync_counts AS (
+    SELECT
+      COUNT(DISTINCT attester) AS zksync_attester_count,
+      COUNT(DISTINCT recipient) AS zksync_recipient_count,
+      COUNT(*) AS zksync_attestation_count,
+      (
+        SELECT
+          COUNT(*)
+        FROM
+          attestationstation_v1_zksync.EAS_evt_Revoked
+        WHERE
+          attester = 0x2B5D97CBE50eA9bf809CbE18A2003E4Cb4D283cC
+      ) AS zksync_revoked_count
+    FROM
+      attestationstation_v1_zksync.EAS_evt_Attested
+    WHERE
+      attester = 0x2B5D97CBE50eA9bf809CbE18A2003E4Cb4D283cC
+  ),
+  scroll_counts AS (
+    SELECT
+      COUNT(DISTINCT attester) AS scroll_attester_count,
+      COUNT(DISTINCT recipient) AS scroll_recipient_count,
+      COUNT(*) AS scroll_attestation_count,
+      (
+        SELECT
+          COUNT(*)
+        FROM
+          eas_scroll.EAS_evt_Revoked
+        WHERE
+          attester = 0xCc90105D4A2aa067ee768120AdA19886021dF422
+      ) AS scroll_revoked_count
+    FROM
+      eas_scroll.EAS_evt_Attested
+    WHERE
+      attester = 0xCc90105D4A2aa067ee768120AdA19886021dF422
+  )
+SELECT
+  'Optimism' AS Chain,
+  op_attestation_count AS "# Attestations",
+  op_revoked_count AS "# Revocations",
+  op_recipient_count AS "# Unique Recipients"
+FROM
+  optimism_counts
+UNION
+SELECT
+  'Linea' AS Chain,
+  linea_attestation_count,
+  linea_revoked_count,
+  linea_recipient_count
+FROM
+  linea_counts
+UNION
+SELECT
+  'Arbitrum' AS Chain,
+  arbitrum_attestation_count,
+  arbitrum_revoked_count,
+  arbitrum_recipient_count
+FROM
+  arbitrum_counts
+UNION
+SELECT
+  'Scroll' AS Chain,
+  scroll_attestation_count,
+  scroll_revoked_count,
+  scroll_recipient_count
+FROM
+  scroll_counts
+UNION
+SELECT
+  'zkSync' AS Chain,
+  zksync_attestation_count,
+  zksync_revoked_count,
+  zksync_recipient_count
+FROM
+  zksync_counts
+ORDER BY
+  "# Attestations" DESC;
