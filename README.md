@@ -2,9 +2,13 @@
 
 ## Intro
 
-EAS Pulse is a Dune analytics dashboard built from scratch for the Superhack 2024 for all about Ethereum Attestation Service: attestation usage, daily, weekly, monthly and quarterly performance, revenue generation, and trends in the superchain and other blockchain networks.
+EAS Pulse is a Dune analytics dashboard built from scratch for the Superhack 2024 for all about [Ethereum Attestation Service](https://attest.org): attestation usage, daily, weekly, monthly and quarterly performance, revenue generation, and trends in the superchain and other blockchain networks.
+
+You can view the dashboard live [here](https://dune.com/ivanmolto/eas-pulse-ethereum-attestation-service)
 
 ## Description
+
+[EAS Pulse](https://dune.com/ivanmolto/eas-pulse-ethereum-attestation-service) Analytics dashboard
 
 A pulse with an exploration to the ecosystem in the superchain and also cross-chain with some flagship attestation integrators: [Passport](https://passport.xyz), [Coinbase Verifications](https://github.com/coinbase/verifications).
 
