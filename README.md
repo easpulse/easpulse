@@ -14,6 +14,8 @@ A pulse with an exploration to the ecosystem in the superchain and also cross-ch
 
 And superchain attestoooors such as [Optimism Governance and RetroPGF](https://optimism.io) and some attestoooors such as [Clique](), [Praise](https://givepraise.xyz), and [Attest Fest](https://attest-fest.party).
 
+![EAS Pulse dashboard](https://ivanmolto.mypinata.cloud/ipfs/QmYmyrPTdyr8CpgXoVjv7fCfSjq3wRBdpXapeH4TzVXjfR)
+
 Attestations are on its way to hit 3 millions with Coinbase Verifications leveraging this stack for a long time until the irruption of the [Scroll Canvas](https://scroll.io/canvas/mint) campaign.
 
 ## Tech Stack
