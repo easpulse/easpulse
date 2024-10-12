@@ -24,16 +24,25 @@ his project was built using SQL for querying [Dune Analytics](https://dune.com) 
 
 ## Blockchain networks in the analysis
 
-Optimism
-Base
-Linea
-Scroll
-zkSync
-Arbitrum
-Poilygon
-Ethereum
+### Optimism
 
-_Data from Celo and Arbitrum One is not included_
+### Base
+
+### Celo
+
+### Linea
+
+### Scroll
+
+### zkSync
+
+### Arbitrum
+
+### Arbitrum Nova
+
+### Polygon
+
+### Ethereum
 
 ## License
 
