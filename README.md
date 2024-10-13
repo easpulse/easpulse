@@ -38,13 +38,23 @@ These are the Superchain attestors covered in the analysis: [PassportXYZ](https:
 
 ### Coinbase Verifications
 
+![](https://ivanmolto.mypinata.cloud/ipfs/QmR5oFr29YwfrGSp9nMAMoK7hy8v6dMZkKFjgwxJryPmgN)
+
 ### The Optimism Collective
+
+![](https://ivanmolto.mypinata.cloud/ipfs/QmeFEtLERMJ2wy1tFwJ5Qf7a8JijfenyJHcQsw5yAZHACX)
 
 ### Clique
 
+![](https://ivanmolto.mypinata.cloud/ipfs/QmdXHXuNNE3GXqgfvSSuf6ifjhoLNAMciJchd1aH5u8J7Q)
+
 ### Praise
 
+![](https://ivanmolto.mypinata.cloud/ipfs/QmT7jauR9qrKjns8jbWsApMa9Txkqjtp74DqzMqpmLKHsZ)
+
 ### Attest Fest
+
+![](https://ivanmolto.mypinata.cloud/ipfs/QmcV2jfGbeorWPM7BjMwkC1ktbnxQF6YdMeiq47pkaepQE)
 
 ## License
 
