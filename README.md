@@ -24,25 +24,27 @@ his project was built using SQL for querying [Dune Analytics](https://dune.com) 
 
 ## Blockchain networks in the analysis
 
-### Optimism
+These are the blockchain networks covered in the analysis: [Scroll](https://scroll.io), [Base](https://www.base.org), [Optimism](https://optimism.io), [Linea](https://linea.build/), Arbitrum Nova, [Arbitrum](https://arbitrum.io/), [zkSync](https://zksync.io), [Polygon](https://polygon.technology) and [Ethereum](https://ethereum.org).
 
-### Base
+## Attestoooors
 
-### Celo
+These are the Superchain attestors covered in the analysis: [PassportXYZ](https://www.passport.xyz), [Coinbase](https://www.coinbase.com) Verifications, [The Optimism Collective](https://community.optimism.io/welcome/welcome-overview), [Clique](https://www.clique.tech), [Praise](https://givepraise.xyz), and [Attest Fest](https://attest-fest.party).
 
-### Linea
+### PassportXYZ
 
-### Scroll
+![](https://ivanmolto.mypinata.cloud/ipfs/QmW6AHT6KbNpWX2BFjwESzyjbtQ6N2nvsWDzAHLyjrgqSR)
 
-### zkSync
+![](https://ivanmolto.mypinata.cloud/ipfs/QmZcHZWKvcoRxWZKzk559vGWRZRAjgw1FeXccs5WjjVKkS)
 
-### Arbitrum
+### Coinbase Verifications
 
-### Arbitrum Nova
+### The Optimism Collective
 
-### Polygon
+### Clique
 
-### Ethereum
+### Praise
+
+### Attest Fest
 
 ## License
 
