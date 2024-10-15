@@ -1,0 +1,63 @@
+WITH
+  attestations AS (
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      ethereum_attestation_service_ethereum.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      attestationstation_v1_optimism.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      attestationstation_v1_base.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      arbitrum_eas_arbitrum.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      attestationstation_v1_linea.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      polygon_eas_polygon.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      eas_scroll.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      attestationstation_v1_zksync.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      eas_nova.EAS_evt_Attested
+  )
+SELECT
+  DATE_TRUNC('week', evt_block_time) AS "Day",
+  COUNT(uid) AS "# Attestations"
+FROM
+  attestations
+GROUP BY
+  1
