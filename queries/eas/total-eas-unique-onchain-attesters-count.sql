@@ -44,6 +44,11 @@ WITH
       attester
     FROM
       attestationstation_v1_zksync.EAS_evt_Attested
+    UNION
+    SELECT
+      attester
+    FROM
+      eas_celo.EAS_evt_Attested
   )
 SELECT
   COUNT(DISTINCT attester) AS "Total Attesters"

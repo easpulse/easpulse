@@ -53,6 +53,12 @@ WITH
       uid 
     FROM
       eas_nova.EAS_evt_Attested
+    UNION
+    SELECT
+      evt_block_time,
+      uid 
+    FROM
+      eas_celo.EAS_evt_Attested
   )
 SELECT
   DATE_TRUNC('week', evt_block_time) AS "Day",

@@ -40,4 +40,9 @@ SELECT
       COUNT(*)
     FROM
       attestationstation_v1_zksync.EAS_evt_Revoked
+  ) + (
+    SELECT
+      COUNT(*)
+    FROM
+      eas_celo.EAS_evt_Revoked
   ) AS "Total Revocations"

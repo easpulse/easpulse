@@ -44,6 +44,11 @@ WITH
       recipient
     FROM
       attestationstation_v1_zksync.EAS_evt_Attested
+    UNION
+    SELECT
+      recipient
+    FROM
+      eas_celo.EAS_evt_Attested
   )
 SELECT
   COUNT(DISTINCT recipient) AS "Total Recipients"

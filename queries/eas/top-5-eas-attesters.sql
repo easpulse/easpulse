@@ -99,6 +99,16 @@ WITH
       eas_scroll.EAS_evt_Attested h
     GROUP BY
       h.attester
+    UNION ALL
+    SELECT
+      i.attester,
+      COUNT(*) AS attest_count,
+      COUNT(DISTINCT i.recipient) AS recipient_count,
+      'Celo' AS data_source
+    FROM
+      eas_celo.EAS_evt_Attested i
+    GROUP BY
+      i.attester
   )
 SELECT
   cr.attester AS "Attester",

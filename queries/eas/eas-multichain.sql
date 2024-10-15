@@ -83,6 +83,20 @@ WITH
     FROM
       eas_nova.EAS_evt_Attested
   ),
+  celo_counts AS (
+    SELECT
+      COUNT(DISTINCT attester) AS celo_attester_count,
+      COUNT(DISTINCT recipient) AS celo_recipient_count,
+      COUNT(*) AS celo_attestation_count,
+      (
+        SELECT
+          COUNT(*)
+        FROM
+          eas_celo.EAS_evt_Revoked
+      ) AS celo_revoked_count
+    FROM
+      eas_celo.EAS_evt_Attested
+  ),
   ethereum_counts AS (
     SELECT
       COUNT(DISTINCT attester) AS eth_attester_count,
@@ -205,5 +219,14 @@ SELECT
   zksync_attester_count
 FROM
   zksync_counts
+UNION
+SELECT
+  'Celo' AS Chain,
+  celo_attestation_count,
+  celo_revoked_count,
+  celo_recipient_count,
+  celo_attester_count
+FROM
+  celo_counts
 ORDER BY
   "# Attestations" DESC;

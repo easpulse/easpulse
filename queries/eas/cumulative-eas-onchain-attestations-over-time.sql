@@ -89,6 +89,16 @@ WITH
       1
     
   ),
+  celo_daily_attestations AS (
+    SELECT
+      DATE_TRUNC('day', evt_block_time) AS "Day",
+      COUNT(uid) AS "# Attestations"
+    FROM
+      eas_celo.EAS_evt_Attested
+    GROUP BY
+      1
+    
+  ),
   daily_attestations AS (
     SELECT
       *
@@ -134,6 +144,11 @@ WITH
       *
     FROM
       nova_daily_attestations
+    UNION ALL
+    SELECT
+      *
+    FROM
+      celo_daily_attestations
   ),
   agg_daily_attestations AS (
     SELECT
