@@ -1,46 +1,51 @@
 WITH
-  all_recipients AS (
+  all_attesters AS (
     SELECT
-      recipient
+      attester
     FROM
       attestationstation_v1_optimism.EAS_evt_Attested
     UNION
     SELECT
-      recipient
+      attester
     FROM
       attestationstation_v1_base.EAS_evt_Attested
     UNION
     SELECT
-      recipient
+      attester
     FROM
       attestationstation_v1_linea.EAS_evt_Attested
     UNION
     SELECT
-      recipient
+      attester
     FROM
       arbitrum_eas_arbitrum.EAS_evt_Attested
     UNION
     SELECT
-      recipient
+      attester
     FROM
       polygon_eas_polygon.EAS_evt_Attested
     UNION
     SELECT
-      recipient
+      attester
+    FROM
+      eas_nova.EAS_evt_Attested
+    UNION
+    SELECT
+      attester
     FROM
       ethereum_attestation_service_ethereum.EAS_evt_Attested
     UNION
     SELECT
-      recipient
+      attester
     FROM
       eas_scroll.EAS_evt_Attested
     UNION
     SELECT
-      recipient
+      attester
     FROM
       attestationstation_v1_zksync.EAS_evt_Attested
   )
 SELECT
-  COUNT(DISTINCT recipient) AS "Total Recipients"
+  COUNT(DISTINCT attester) AS "Total Attesters"
 FROM
-  all_recipients
+  all_attesters

@@ -24,7 +24,8 @@ SELECT
       COUNT(*)
     FROM
       polygon_eas_polygon.EAS_evt_Revoked
-  ) + (
+  ) + 
+  (
     SELECT
       COUNT(*)
     FROM

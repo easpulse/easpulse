@@ -30,7 +30,13 @@ SELECT
         COUNT(*)
       FROM
         polygon_eas_polygon.EAS_evt_Attested
-    ) + (
+    )
+    + (
+      SELECT
+        COUNT(*)
+      FROM
+        eas_nova.EAS_evt_Attested
+    )+ (
       SELECT
         COUNT(*)
       FROM
