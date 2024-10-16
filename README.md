@@ -21,13 +21,29 @@ And superchain attestoooors such as [Optimism Governance and RetroPGF](https://o
 
 Onchain attestations are on its way with hit +6 millions with some Scroll Canvas badges and Coinbase Verifications leveraging this stack. The irruption of the [Scroll Canvas](https://scroll.io/canvas/mint) campaign has changed forever the attestation ecosystem.
 
+## Key features
+
+The counters, tables and charts visualize:
+
+- Total attestations
+- Total revocations
+- Unique recipients
+- Unique attesters
+- Attestations over time
+- Attestations by chain
+- Daily/weekly/monthly/quarterly attestations
+- Top attesters
+- Attestation revenue
+- Flagship attestation integrations: PassportXYZ and Coinbase Verifications
+- Superchain attestoooors: The Optimism Collective, Clique, Praise, and Attest Fest
+
 ## Tech Stack
 
 his project was built using SQL for querying [Dune Analytics](https://dune.com) on the superchain and other blockchain networks.
 
 ## Blockchain networks in the analysis
 
-These are the blockchain networks covered in the analysis: [Scroll](https://scroll.io), [Base](https://www.base.org), [Optimism](https://optimism.io), [Linea](https://linea.build/), Arbitrum Nova, [Arbitrum](https://arbitrum.io/), [zkSync](https://zksync.io), [Polygon](https://polygon.technology) and [Ethereum](https://ethereum.org).
+These are the blockchain networks covered in the analysis: [Scroll](https://scroll.io), [Base](https://www.base.org), [Optimism](https://optimism.io), [Linea](https://linea.build/), Arbitrum Nova, [Arbitrum](https://arbitrum.io/), [zkSync](https://zksync.io), [Polygon](https://polygon.technology), [Celo](https://celo.org) and [Ethereum](https://ethereum.org).
 
 ## Attestation integrators and Attestoooors
 
