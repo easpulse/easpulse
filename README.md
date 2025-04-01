@@ -2,6 +2,8 @@
 
 ## Intro
 
+Development of web platform [here](https://github.com/ivanmolto/easpulse.com)
+
 EAS Pulse is a Dune analytics dashboard built from scratch for the Superhack 2024 for all about [Ethereum Attestation Service](https://attest.org): attestation usage, daily, weekly, monthly and quarterly performance, revenue generation, and trends in the superchain and other blockchain networks.
 [Superhack 2024](https://ethglobal.com/events/superhack2024) on the Superchain was a hackathon run by [ETHGlobal](https://ethglobal.com/) on August 2 - 16, 2024.
 
